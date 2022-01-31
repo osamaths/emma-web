@@ -1,0 +1,79 @@
+.full-answer {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    background-color: #f1f1f1;
+}
+
+.full-answer > .date {
+    flex: 1;
+    text-align: right;
+}
+.full-answer > .answers {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.full-answer > .answers > .answer-container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.full-answer > .answers > .answer-container > .answer:hover {
+    font-weight: bold;
+    color: #4db6ac;
+    transition: all 0.02s ease-in-out;
+}
+.full-answer > .answers > .answer-container > .answer {
+    min-width: 50%;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    opacity: 0;
+    transform: scale(0.5);
+    background-color: #4db6ac;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    padding: 5px 5px;
+    z-index: 1;
+    white-space: nowrap;
+    top: -35px;
+    transition: all 0.2s ease-in-out;
+    left: -10px;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* tooltip  after*/
+.tooltip .tooltiptext::after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8.5px 0 8.5px;
+    border-color: #4db6ac transparent transparent transparent;
+    position: absolute;
+    left: 10%;
+    bottom: -8px;
+}
